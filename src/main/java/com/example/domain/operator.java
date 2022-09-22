@@ -23,7 +23,7 @@ public class operator {
     @TableField(value = "department")
     private String department;
     @TableField(value = "level_id")
-    private String levleId;
+    private String levelId;
     @TableField(value = "refund_authority")
     private Integer refundAuthority;
     @TableField(value = "state")
