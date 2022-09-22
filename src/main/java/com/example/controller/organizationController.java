@@ -11,19 +11,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/organizationController")
+@RequestMapping("/organization")
 public class organizationController {
 
     @Autowired
     private organizationService organizationService;
 
+    /**
+     * 机构列表
+     * @param page
+     * @param pageSize
+     * @return
+     */
     @PostMapping("/page")
-    public R<Page> search(int page,int pageSize){
+    public R<Page> list(int page,int pageSize){
 
         Page pageInfo = new Page(page,pageSize);
 
         LambdaQueryWrapper<organization> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.orderByAsc(organization::getCreateId);
+        queryWrapper.orderByAsc(organization::getId);
         organizationService.page(pageInfo,queryWrapper);
 
         return R.success(pageInfo);
