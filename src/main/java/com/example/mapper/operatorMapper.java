@@ -1,9 +1,9 @@
 package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.domain.operator;
+import com.example.domain.Operator;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface operatorMapper extends BaseMapper<operator> {
+public interface operatorMapper extends BaseMapper<Operator> {
 }

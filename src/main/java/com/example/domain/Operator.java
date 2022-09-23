@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Data
 @TableName("tbl_operator")
-public class operator {
+public class Operator {
 
     @TableId(type = IdType.ASSIGN_ID)
     private Integer id;

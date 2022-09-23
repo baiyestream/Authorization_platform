@@ -46,10 +46,6 @@ public class addUserTest {
         System.out.println("耗时"+(endTime-startTime));
 
 
-//        long startTime = System.currentTimeMillis();
-//        userAuthorizationMapper.insertBatch01(adduser);
-//        long endTime = System.currentTimeMillis();
-//        System.out.println("耗时"+(endTime-startTime));
 
     }
 
