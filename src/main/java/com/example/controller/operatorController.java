@@ -41,4 +41,15 @@ public class operatorController {
         request.getSession().setAttribute("operator",operator1.getLoginAccount());
         return R.success(operator1);
     }
+
+    /**
+     * 操作员退出接口
+     */
+    @PostMapping("/logout")
+    public R<String> logout(HttpServletRequest request){
+        request.getSession().removeAttribute("operator");
+        return R.success("退出成功");
+    }
+
+
 }
