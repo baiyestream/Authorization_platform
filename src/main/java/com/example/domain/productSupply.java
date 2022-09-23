@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 @Data
 @TableName("tbl_product_supply")
@@ -16,8 +17,12 @@ public class productSupply {
     private Integer id;
     @TableField(value = "business_license_id")
     private Integer businessLicenseId;
+    @TableField(value = "organization_name")
+    private String organizationName;
+    @TableField(value = "product_name")
+    private String productName;
     @TableField(value = "supply_time")
-    private Timestamp supplyTime;
+    private Date supplyTime;
     @TableField(value = "supply_quantity")
     private Integer supplQuantity;
     @TableField(value = "batch_number")

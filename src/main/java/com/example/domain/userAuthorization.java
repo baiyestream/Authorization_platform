@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Data
 @TableName("tbl_user_authorization")
@@ -29,7 +29,7 @@ public class userAuthorization {
     @TableField(value = "phone_number")
     private String phoneNumber;
     @TableField(value = "authorization_time")
-    private Timestamp authorizationTime;
+    private Date authorizationTime;
     @TableField(value = "activate_code")
     private String activateCode;
 }

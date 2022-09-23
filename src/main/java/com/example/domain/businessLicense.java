@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 @Data
 @TableName("tbl_business_license")
@@ -23,9 +24,9 @@ public class businessLicense {
     @TableField(value = "product_name")
     private String productName;
     @TableField(value = "business_license_start")
-    private Timestamp businessLicenseStart;
+    private Date businessLicenseStart;
     @TableField(value = "business_license_end")
-    private Timestamp businessLicenseEnd;
+    private Date businessLicenseEnd;
     @TableField(value = "state")
     private Integer state;
     @TableField(value = "remarks")
@@ -33,7 +34,7 @@ public class businessLicense {
     @TableField(value = "create_id")
     private Integer createId;
     @TableField(value = "create_time")
-    private Timestamp createTime;
+    private Date createTime;
     @TableField(value = "update_id")
     private Integer updateId;
     @TableField(value = "update_time")
