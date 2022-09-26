@@ -24,7 +24,7 @@ public class organizationController {
      * @return
      */
     @PostMapping("/page")
-    public R<Page> list(int page,int pageSize){
+    public R<Page> list(Integer page,Integer pageSize){
 
         Page pageInfo = new Page(page,pageSize);
 
