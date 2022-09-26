@@ -10,10 +10,10 @@ import java.util.Date;
 
 @Data
 @TableName("tbl_organization")
-public class organization {
+public class Organization {
 
     @TableId(type = IdType.ASSIGN_ID)
-    private Integer id;
+    private Long id;
     @TableField(value = "organization_Name")
     private String organizationName;
     @TableField(value = "contact_address")

@@ -27,7 +27,7 @@ public class Operator {
     @TableField(value = "refund_authority")
     private Integer refundAuthority;
     @TableField(value = "state")
-    private String state;
+    private Integer state;
     @TableField(value = "first_login_flag")
     private Integer firstLoginFlag;
     @TableField(value = "create_id")
