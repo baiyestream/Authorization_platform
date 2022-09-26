@@ -32,8 +32,8 @@ public class Organization {
     private Date registrationTime;
     @TableField(value = "state")
     private Integer state;
-    @TableField(value = "estabilshment_time")
-    private Date estabilshmentTime;
+    @TableField(value = "establishment_time")
+    private Date establishmentTime;
     @TableField(value = "enterprise_scale")
     private Integer enterpriseScale;
     @TableField(value = "business_scope")

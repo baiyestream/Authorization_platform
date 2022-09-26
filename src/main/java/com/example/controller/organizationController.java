@@ -6,10 +6,7 @@ import com.example.common.R;
 import com.example.domain.Organization;
 import com.example.service.organizationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
@@ -60,5 +57,19 @@ public class organizationController {
         organizationService.save(organization);
 
         return R.success("增加机构成功");
+    }
+
+
+    /**
+     * 机构管理：机构详情
+     */
+    @GetMapping("/details")
+    public R<Organization> details(Long id){
+
+        Organization organization = new Organization();
+        organization.setId(id);
+
+        return R.success(organizationService.getById(id));
+
     }
 }
