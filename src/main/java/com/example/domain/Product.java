@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 public class Product {
 
     @TableId(type = IdType.ASSIGN_ID)
-    private Integer id;
+    private Long id;
     @TableField(value = "product_name")
     private String productName;
     @TableField(value = "product_overview")

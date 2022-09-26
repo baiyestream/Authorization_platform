@@ -6,10 +6,7 @@ import com.example.common.R;
 import com.example.domain.Product;
 import com.example.service.productService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
@@ -51,6 +48,18 @@ public class productController {
         productService.save(product);
 
         return R.success("新增产品成功");
+    }
+
+    /**
+     * 产品管理：产品详情
+     */
+    @GetMapping("/details")
+    public R<Product> details(Long id){
+
+        Product product = new Product();
+        product.setId(id);
+
+        return R.success(productService.getById(id));
     }
 
 
