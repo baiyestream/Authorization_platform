@@ -49,9 +49,9 @@ public class organizationController {
     @PostMapping("/add")
     public R<String> save(HttpServletRequest request, @RequestBody Organization organization){
 
-        Object operator = request.getSession().getAttribute("operator");
-        // 创建人
-        organization.setCreateId((Integer) operator);
+        Integer operator = (Integer) request.getSession().getAttribute("operator");
+
+        organization.setCreateId(operator);
         // 创建时间
         organization.setCreateTime(Timestamp.valueOf(LocalDateTime.now()));
         // 建档时间

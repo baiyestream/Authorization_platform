@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 
 @Data
 @TableName("tbl_product")
-public class product {
+public class Product {
 
     @TableId(type = IdType.ASSIGN_ID)
     private Integer id;
