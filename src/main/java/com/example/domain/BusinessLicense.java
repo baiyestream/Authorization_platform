@@ -11,16 +11,12 @@ import java.util.Date;
 
 @Data
 @TableName("tbl_business_license")
-public class businessLicense {
+public class BusinessLicense {
 
     @TableId(type = IdType.ASSIGN_ID)
-    private Integer id;
-    @TableField(value = "organization_id")
-    private Integer organizationId;
+    private Long id;
     @TableField(value = "organization_name")
     private String organizationName;
-    @TableField(value = "product_id")
-    private Integer productId;
     @TableField(value = "product_name")
     private String productName;
     @TableField(value = "business_license_start")

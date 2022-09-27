@@ -1,9 +1,9 @@
 package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.domain.businessLicense;
+import com.example.domain.BusinessLicense;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface businessLicenseMapper extends BaseMapper<businessLicense> {
+public interface businessLicenseMapper extends BaseMapper<BusinessLicense> {
 }
